@@ -20,8 +20,7 @@ public class WordCountCluster {
 
     public static void main(String[] args) {
         SparkConf conf = new SparkConf()
-                            .setAppName("WordCountLocal")
-                            .setMaster("local");
+                            .setAppName("WordCountCluster");
         conf.set("spark.testing.memory", "1073741824");
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> lines = sc.textFile("hdfs://spark1:9000/user/data/test_spark.txt");

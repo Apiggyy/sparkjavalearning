@@ -21,9 +21,11 @@ public class WordCountLocal {
 
     public static void main(String[] args) {
         SparkConf conf = new SparkConf()
-                            .setAppName("WordCountLocal");
+                            .setAppName("WordCountLocal")
+                            .setMaster("local");
+        conf.set("spark.testing.memory", "1073741824");
         JavaSparkContext sc = new JavaSparkContext(conf);
-        JavaRDD<String> lines = sc.textFile("F:\\Nokia ICT\\01_项目\\02_运维相关\\test_spark.txt");
+        JavaRDD<String> lines = sc.textFile("E:\\迅雷下载\\test_spark.txt");
         JavaRDD<String> words = lines.flatMap(new FlatMapFunction<String, String>() {
             @Override
             public Iterator<String> call(String line) throws Exception {
