@@ -7,6 +7,7 @@ import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.Function2;
 
 public class HdfsFile {
+
     public static void main(String[] args) {
         SparkConf conf = new SparkConf().setAppName("HdfsFile");
         conf.set("spark.testing.memory", "1073741824");
