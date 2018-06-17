@@ -117,7 +117,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.self.learning.core.WordCountCluster</mainClass>
+                            <mainClass>com.self.learning.core.HdfsFile</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
