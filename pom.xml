@@ -117,7 +117,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.self.learning.core.HdfsFile</mainClass>
+                            <mainClass>com.self.learning.core.ActionOperation</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
