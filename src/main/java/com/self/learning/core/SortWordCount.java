@@ -13,10 +13,10 @@ import scala.Tuple2;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class sortWordCount {
+public class SortWordCount {
 
     public static void main(String[] args) {
-        SparkConf conf = new SparkConf().setAppName("sortWordCount").setMaster("local");
+        SparkConf conf = new SparkConf().setAppName("SortWordCount").setMaster("local");
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> lines = sc.textFile("E:\\迅雷下载\\test_spark.txt");
         JavaRDD<String> words = lines.flatMap(new FlatMapFunction<String, String>() {
