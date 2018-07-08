@@ -30,8 +30,8 @@ public class RDD2DataFrameToReflection {
 
         Dataset<Row> df = sqlContext.createDataFrame(studentJavaRDD, Student.class);
         df.registerTempTable("students");
-        Dataset<Row> teenagerDF = sqlContext.sql("select * from students where age>=18");
-        JavaRDD<Row> rows = teenagerDF.toJavaRDD();
+        Dataset<Row> teenagerDf = sqlContext.sql("select * from students where age>=18");
+        JavaRDD<Row> rows = teenagerDf.toJavaRDD();
         JavaRDD<Student> studentList = rows.map(new Function<Row, Student>() {
 
             private static final long serialVersionUID = 8749181098385279286L;
