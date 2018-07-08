@@ -40,7 +40,7 @@ public class RDD2DataFrameProgrammaticlly {
         StructType structType = DataTypes.createStructType(structFields);
 
         Dataset<Row> df = sqlContext.createDataFrame(studentsRDD, structType);
-            df.registerTempTable("students");
+        df.registerTempTable("students");
         Dataset<Row> students = sqlContext.sql("select * from students where age>=18");
         List<Row> rows = students.toJavaRDD().collect();
         for (Row row : rows) {
