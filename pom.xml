@@ -117,7 +117,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.self.learning.sql.DataFrameOperation</mainClass>
+                            <mainClass>com.self.relearning.core.WordCountLocal</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
