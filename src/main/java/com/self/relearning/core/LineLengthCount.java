@@ -35,7 +35,7 @@ public class LineLengthCount {
 
             @Override
             public void call(Tuple2<String, Integer> t) throws Exception {
-                System.out.println(t._1 + "appears " + t._2 + " times.");
+                System.out.println(t._1 + " appears " + t._2 + " times.");
             }
         });
     }
