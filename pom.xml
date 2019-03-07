@@ -116,7 +116,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
+                            <classpathPrefix>../lib/</classpathPrefix>
                             <mainClass>com.self.relearning.core.WordCountLocal</mainClass>
                         </manifest>
                     </archive>
