@@ -13,9 +13,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class KafkaWordCount {
+public class KafkaReceiverWordCount {
     public static void main(String[] args) throws Exception {
-        SparkConf conf = new SparkConf().setMaster("local[2]").setAppName("KafkaWordCount");
+        SparkConf conf = new SparkConf().setMaster("local[2]").setAppName("KafkaReceiverWordCount");
         conf.set("spark.testing.memory", "1073741824");
         JavaStreamingContext sc = new JavaStreamingContext(conf, Durations.seconds(5));
         Map<String, Integer> topicThreadMap = new HashMap<>();
